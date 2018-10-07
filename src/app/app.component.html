@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-sm-8 mb-1">
+      <img class="img-responsive" src="../assets/images/logo.png" alt="carefour logo" />
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="search"  class="search-input">
+    </div>
+  </div>
+</div>
+
+<div class="container text-center mt-3 mb-3">
+ 
+  <div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6 border-sign-in">
+    <app-login-form></app-login-form>
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+</div>
+
+
+<div class="container">
+  <hr />
+  <div class="d-flex justify-content-between">
+    <div *ngFor="let product of products">
+      <img [src]="product.image" class="img-thumbnail" alt="carefour product" />
+      <p class="product-name">{{product.name}}</p>
+      <p class="product-price">{{product.price}} {{product.currency}}</p>
+    </div>
+  </div>
+</div>
